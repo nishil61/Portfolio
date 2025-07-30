@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7"
+  },
+  "dependencies": {
+    "emailjs-com": "^3.2.0",
+    "lucide-react": "^0.534.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  }
+}
