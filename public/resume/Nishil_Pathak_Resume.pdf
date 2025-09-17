@@ -1,0 +1,44 @@
+# Resume PDF Placeholder
+# In a real implementation, you would place the actual PDF file here
+# For now, this serves as a placeholder to demonstrate the download functionality
+
+This file represents Nishil Pathak's resume containing:
+
+## Personal Information
+- Name: Nishil Pathak
+- Email: pathaknishil3642@gmail.com
+- Phone: +91 9033039930
+- Location: Vadodara, Gujarat, India
+- LinkedIn: https://www.linkedin.com/in/nishil-pathak-05b2111b0/
+- GitHub: https://github.com/nishil61
+
+## Education
+- B.Tech Computer Engineering, SVIT Vasad (2022-2026) - CGPA: 8.38
+- HSC, Rosary High School (2021-2022) - 56%
+- SSC, Rosary High School (2019-2020) - 84%
+
+## Skills
+- Programming: Python, Java, Advanced Java, C, HTML Basics
+- Cloud: AWS Cloud, GCP, Cloud Architecture
+- AI/ML: Machine Learning, Data Science, Computer Vision
+- Tools: Flutter, MongoDB, MySQL, Git
+
+## Projects
+1. Advanced Weather Detection App
+2. CampusEats - Food Ordering Application
+3. Crypto Pairwise Alpha Strategy
+4. Parts Identification System
+
+## Experience
+- AI for Manufacturing Training + Internship - Intel (2025)
+- AICTE Internship on AI - Microsoft & SAP TechSaksham (2025)
+- Generative AI Internship - Flaunch Innovation (2024)
+- AI/Cloud Internship - Edunet Foundation (2024)
+
+## Certifications
+- AI for Manufacturing Training + Internship - Intel
+- AICTE Internship on AI - Microsoft & SAP TechSaksham
+- Generative AI Internship - Flaunch Innovation
+- AI/Cloud Internship - Edunet Foundation
+- IEEE Mentor-Mentee Program
+- Python Programming Certification
