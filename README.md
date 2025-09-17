@@ -1,23 +1,88 @@
-# Nishil Pathak Portfolio
+# Nishil Pathak - Portfolio Website
 
-This is my personal portfolio website built with React, Vite, and Tailwind CSS. It showcases my projects, education, certifications, and provides a way to contact me directly.
+A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. Features include project showcases, certificate displays, contact form with auto-reply functionality, and more.
 
-## Features
+## 🚀 Features
 
-- **Responsive Design:** Works seamlessly on desktop and mobile devices.
-- **Project Showcase:** Highlights selected projects with descriptions and links.
-- **Resume Download:** Download my latest resume in PDF format.
-- **Contact Form:** Send me a message directly from the site (EmailJS integration).
-- **Like Button:** Interactive like button with local storage support.
-- **Education & Certifications:** Overview of my academic background and certifications.
+- **Responsive Design**: Optimized for all devices and screen sizes
+- **Interactive Sections**: Hero, About, Projects, Certificates, Education, Contact
+- **Contact Form**: EmailJS integration with auto-reply functionality
+- **Certificate Showcase**: Expandable skills display with direct certificate links
+- **Project Gallery**: Interactive project cards with live demo and code links
+- **Like Button**: Engaging user interaction with local storage
+- **Resume Download**: Direct PDF download functionality
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-- [React](https://react.dev/)
-- [Vite](https://vitejs.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [EmailJS](https://www.emailjs.com/) (for contact form notifications)
+- **Frontend**: [React](https://react.dev/) 18 + [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Email Service**: [EmailJS](https://www.emailjs.com/)
+- **Deployment**: Netlify Ready
+
+## 📋 Prerequisites
+
+Before running this project, make sure you have:
+
+- Node.js (v16 or higher)
+- npm or yarn package manager
+- EmailJS account (for contact form functionality)
+
+## ⚙️ Installation & Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/nishil61/portfolio.git
+   cd portfolio
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Environment Configuration**
+   
+   Copy the example environment file:
+   ```bash
+   cp .env.example .env.local
+   ```
+   
+   Update `.env.local` with your EmailJS credentials:
+   ```bash
+   VITE_EMAILJS_SERVICE_ID=your_service_id_here
+   VITE_EMAILJS_TEMPLATE_ID=your_template_id_here
+   VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID=your_autoreply_template_id_here
+   VITE_EMAILJS_PUBLIC_KEY=your_public_key_here
+   ```
+
+4. **EmailJS Setup**
+   
+   - Create an account at [EmailJS](https://www.emailjs.com/)
+   - Create an email service
+   - Create two email templates:
+     - Main template (for receiving messages)
+     - Auto-reply template (for sender confirmation)
+   - Get your service ID, template IDs, and public key
+
+5. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+6. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+## 📧 EmailJS Template Configuration
+
+### Main Template (for receiving messages)
+Variables to use: `{{name}}`, `{{email}}`, `{{subject}}`, `{{message}}`, `{{time}}`
+
+### Auto-reply Template (for sender confirmation)
+Variables to use: `{{email}}`, `{{name}}`, `{{subject}}`, `{{original_message}}`, `{{time}}`
 
 ## Getting Started
 
