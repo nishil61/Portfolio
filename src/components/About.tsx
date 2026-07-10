@@ -84,7 +84,7 @@ const About = () => {
                   </div>
                   <div className="flex justify-between">
                     <span className="font-medium text-gray-600">Year:</span>
-                    <span className="text-gray-800">Final Year (2022-2026)</span>
+                    <span className="text-gray-800">2022-2026</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="font-medium text-gray-600">Focus:</span>
