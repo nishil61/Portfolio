@@ -9,9 +9,9 @@ const About = () => {
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      category: 'Programming & Development',
+      category: 'Artificial Intelligence',
       icon: Code,
-      skills: ['Python', 'Java', 'Advanced Java', 'C', 'HTML Basics', 'Flutter'],
+      skills: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'Streamlit', 'Model Deployment'],
       color: 'from-green-500 to-teal-500'
     },
     {
