@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
-import { Mail, Phone, MapPin, Github, Linkedin, MessageCircle, ExternalLink, Send } from 'lucide-react';
+import { Mail, MapPin, Github, Linkedin, MessageCircle, ExternalLink, Send } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -88,13 +88,6 @@ const Contact = () => {
       value: 'pathaknishil3642@gmail.com',
       href: 'mailto:pathaknishil3642@gmail.com',
       color: 'from-blue-500 to-indigo-500'
-    },
-    {
-      icon: Phone,
-      label: 'Phone',
-      value: '+91 9033039930',
-      href: 'tel:+919033039930',
-      color: 'from-green-500 to-teal-500'
     },
     {
       icon: MapPin,

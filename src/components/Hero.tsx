@@ -81,13 +81,6 @@ const Hero = ({ onNavigate }: HeroProps) => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <button
-        onClick={() => onNavigate('/about')}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
-      >
-        <ChevronDown className="text-gray-400 hover:text-blue-600 transition-colors duration-300" size={32} />
-      </button>
     </section>
   );
 };
