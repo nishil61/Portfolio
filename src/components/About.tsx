@@ -3,27 +3,27 @@ import { Code, Database, Brain, Globe } from 'lucide-react';
 const About = () => {
   const skills = [
     {
+      category: 'Artificial Intelligence',
+      icon: Brain,
+      skills: ['Machine Learning', 'Deep Learning', 'Natural Language Processing', 'Computer Vision', 'Model Training', 'Inference Pipelines'],
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      category: 'Data Science',
+      icon: Database,
+      skills: ['Python', 'Pandas', 'NumPy', 'Data Analysis', 'Feature Engineering', 'Data Visualization'],
+      color: 'from-green-500 to-teal-500'
+    },
+    {
       category: 'Cloud Computing',
       icon: Globe,
       skills: ['AWS Cloud', 'GCP', 'Cloud Architecture', 'Docker', 'Kubernetes', 'Serverless'],
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      category: 'Artificial Intelligence',
+      category: 'Software Development',
       icon: Code,
-      skills: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'Streamlit', 'Model Deployment'],
-      color: 'from-green-500 to-teal-500'
-    },
-    {
-      category: 'Data Science & ML',
-      icon: Brain,
-      skills: ['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'TensorFlow', 'Data Visualization'],
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      category: 'Database & Tools',
-      icon: Database,
-      skills: ['MongoDB', 'MySQL', 'Git', 'Docker', 'AWS', 'Apache NetBeans'],
+      skills: ['Java', 'Advanced Java', 'Flutter', 'Git', 'REST APIs', 'Problem Solving'],
       color: 'from-orange-500 to-red-500'
     }
   ];
@@ -42,14 +42,14 @@ const About = () => {
           <div className="space-y-6">
             <p className="text-lg text-gray-600 leading-relaxed">
               I'm a passionate Computer Engineering student at Gujarat Technological University (GTU), Ahmedabad, with a strong focus on
-              <span className="font-semibold text-blue-600"> Cloud Computing, NLP, Deep Learning, Natural Language Processing, Computer Vision, Reinforcement Learning, ANNs, CNNs, AI/ML, and Data Science</span>.
+              <span className="font-semibold text-blue-600"> Artificial Intelligence, Data Science, Cloud Computing, NLP, Deep Learning, Computer Vision, and application development</span>.
               Currently maintaining a CGPA of 8.93, I'm dedicated to building innovative solutions that bridge
               the gap between technology and real-world problems.
             </p>
             
             <p className="text-lg text-gray-600 leading-relaxed">
-              My journey spans from developing mobile applications with Flutter to implementing machine learning 
-              algorithms and cloud solutions. I believe in continuous learning and contributing to open-source 
+              My journey spans from developing mobile applications with Flutter to building AI-driven projects, 
+              analyzing data, and deploying cloud solutions. I believe in continuous learning and contributing to open-source 
               projects that make a difference in the tech community.
             </p>
 
@@ -88,7 +88,7 @@ const About = () => {
                   </div>
                   <div className="flex justify-between">
                     <span className="font-medium text-gray-600">Focus:</span>
-                    <span className="text-gray-800">AI/ML & Cloud Computing</span>
+                    <span className="text-gray-800">AI, Data Science & Cloud Computing</span>
                   </div>
                 </div>
               </div>
