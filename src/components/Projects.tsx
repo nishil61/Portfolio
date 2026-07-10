@@ -6,6 +6,19 @@ const Projects = () => {
 
   const projects = [
     {
+      title: 'AarogyaVeda',
+      description: 'An 8th semester internship project focused on health and wellness insights with an accessible web interface and practical deployment.',
+      longDescription: 'AarogyaVeda is my 8th semester internship project, built to present health and wellness information through a clean web application. The project combines a practical user experience with a deployed Streamlit interface and a GitHub source repository for easy access and review.',
+      technologies: ['Python', 'Streamlit', 'Health Analytics', 'Web Deployment'],
+      organization: '8th Semester Internship Project',
+      year: '2026',
+      status: 'Latest Project',
+      github: 'https://github.com/nishil61/AarogyaVeda',
+      demo: 'https://aarogyaveda.streamlit.app/',
+      image: 'https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=500',
+      color: 'from-emerald-500 to-green-600'
+    },
+    {
       title: 'Kisaan Mitra',
       description: 'A comprehensive weather forecasting application with advanced detection capabilities and soil condition monitoring. Features real-time weather data, predictive analytics, and user-friendly mobile interface.',
       longDescription: 'This advanced weather detection app provides accurate weather forecasts and soil condition monitoring for agricultural and general use. The application uses multiple weather APIs to provide comprehensive data including temperature, humidity, precipitation, and soil moisture levels with predictive analytics.',

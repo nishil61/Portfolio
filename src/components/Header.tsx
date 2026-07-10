@@ -1,42 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Home, User, Briefcase, GraduationCap, Award, Mail } from 'lucide-react';
 
-const Header = () => {
+type HeaderProps = {
+  activePath: string;
+  onNavigate: (path: '/home' | '/about' | '/projects' | '/education' | '/certificates' | '/contact') => void;
+};
+
+const Header = ({ activePath, onNavigate }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
 
   const navItems = [
-    { id: 'home', label: 'Home', icon: Home },
-    { id: 'about', label: 'About', icon: User },
-    { id: 'projects', label: 'Projects', icon: Briefcase },
-    { id: 'education', label: 'Education', icon: GraduationCap },
-    { id: 'certificates', label: 'Certificates', icon: Award },
-    { id: 'contact', label: 'Contact', icon: Mail },
+    { id: '/home', label: 'Home', icon: Home },
+    { id: '/about', label: 'About', icon: User },
+    { id: '/projects', label: 'Projects', icon: Briefcase },
+    { id: '/education', label: 'Education', icon: GraduationCap },
+    { id: '/certificates', label: 'Certificates', icon: Award },
+    { id: '/contact', label: 'Contact', icon: Mail },
   ];
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = navItems.map(item => document.getElementById(item.id));
-      const scrollPosition = window.scrollY + 100;
+    setIsOpen(false);
+  }, [activePath]);
 
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(navItems[i].id);
-          break;
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const navigate = (sectionId: '/home' | '/about' | '/projects' | '/education' | '/certificates' | '/contact') => {
+    onNavigate(sectionId);
     setIsOpen(false);
   };
 
@@ -58,9 +45,9 @@ const Header = () => {
                 return (
                   <button
                     key={item.id}
-                    onClick={() => scrollToSection(item.id)}
+                    onClick={() => navigate(item.id as '/home' | '/about' | '/projects' | '/education' | '/certificates' | '/contact')}
                     className={`px-3 py-2 rounded-md text-sm font-medium flex items-center space-x-1 transition-all duration-300 ${
-                      activeSection === item.id
+                      activePath === item.id
                         ? 'text-blue-600 bg-blue-50'
                         : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
                     }`}
@@ -93,9 +80,9 @@ const Header = () => {
                 return (
                   <button
                     key={item.id}
-                    onClick={() => scrollToSection(item.id)}
+                    onClick={() => navigate(item.id as '/home' | '/about' | '/projects' | '/education' | '/certificates' | '/contact')}
                     className={`w-full text-left px-3 py-2 rounded-md text-base font-medium flex items-center space-x-2 transition-all duration-300 ${
-                      activeSection === item.id
+                      activePath === item.id
                         ? 'text-blue-600 bg-blue-50'
                         : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
                     }`}

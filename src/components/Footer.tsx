@@ -1,19 +1,19 @@
-import React from 'react';
 import { Heart, Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
 
-const Footer = () => {
+type FooterProps = {
+  onNavigate: (path: '/home' | '/about' | '/projects' | '/education' | '/certificates' | '/contact') => void;
+};
+
+const Footer = ({ onNavigate }: FooterProps) => {
   const currentYear = new Date().getFullYear();
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   const quickLinks = [
-    { label: 'About', href: '#about' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Education', href: '#education' },
-    { label: 'Certificates', href: '#certificates' },
-    { label: 'Contact', href: '#contact' }
+    { label: 'Home', path: '/home' as const },
+    { label: 'About', path: '/about' as const },
+    { label: 'Projects', path: '/projects' as const },
+    { label: 'Education', path: '/education' as const },
+    { label: 'Certificates', path: '/certificates' as const },
+    { label: 'Contact', path: '/contact' as const }
   ];
 
   const socialLinks = [
@@ -60,12 +60,13 @@ const Footer = () => {
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
+                  <button
+                    type="button"
+                    onClick={() => onNavigate(link.path)}
                     className="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block"
                   >
                     {link.label}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -108,7 +109,7 @@ const Footer = () => {
                 © {currentYear} Nishil Pathak. All rights reserved.
               </p>
               <button
-                onClick={scrollToTop}
+                onClick={() => onNavigate('/home')}
                 className="group w-8 h-8 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
                 aria-label="Scroll to top"
               >

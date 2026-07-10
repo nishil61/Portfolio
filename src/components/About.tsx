@@ -1,4 +1,3 @@
-import React from 'react';
 import { Code, Database, Brain, Globe } from 'lucide-react';
 
 const About = () => {
@@ -42,9 +41,9 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div className="space-y-6">
             <p className="text-lg text-gray-600 leading-relaxed">
-              I'm a passionate Computer Engineering student at SVIT, Vasad, with a strong focus on
+              I'm a passionate Computer Engineering student at Gujarat Technological University (GTU), Ahmedabad, with a strong focus on
               <span className="font-semibold text-blue-600"> Cloud Computing, NLP, Deep Learning, Natural Language Processing, Computer Vision, Reinforcement Learning, ANNs, CNNs, AI/ML, and Data Science</span>.
-              Currently maintaining a CGPA of 8.40, I'm dedicated to building innovative solutions that bridge
+              Currently maintaining a CGPA of 8.93, I'm dedicated to building innovative solutions that bridge
               the gap between technology and real-world problems.
             </p>
             
@@ -81,7 +80,7 @@ const About = () => {
                   </div>
                   <div className="flex justify-between">
                     <span className="font-medium text-gray-600">CGPA:</span>
-                    <span className="text-gray-800">8.40</span>
+                    <span className="text-gray-800">8.93</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="font-medium text-gray-600">Year:</span>
@@ -99,7 +98,7 @@ const About = () => {
 
         {/* Skills Section */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {skills.map((skill, index) => {
+          {skills.map((skill) => {
             const Icon = skill.icon;
             return (
               <div

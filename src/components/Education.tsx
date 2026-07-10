@@ -6,14 +6,14 @@ const Education = () => {
     {
       degree: 'Bachelor of Technology (B.Tech)',
       field: 'Computer Engineering',
-      institution: 'Sardar Vallabhbhai Patel Institute of Technology (SVIT)',
-      location: 'Vasad, Gujarat',
-      duration: '2022 - Present',
-      cgpa: '8.40',
+      institution: 'Gujarat Technological University (GTU)',
+      location: 'Ahmedabad, Gujarat',
+      duration: '2022 - 2026',
+      cgpa: '8.93',
       status: 'Final Year',
       description: 'Focused on Computer Science fundamentals, Data Structures & Algorithms, Machine Learning, Python for Data Science, Java, and Advanced Java. Active participant in technical events and coding competitions.',
       highlights: [
-        'Consistent academic performance with 8.40 CGPA',
+        'Consistent academic performance with 8.93 CGPA',
         'Active in coding competitions and hackathons',
         'Member of technical clubs and societies'
       ],

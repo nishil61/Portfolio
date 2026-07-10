@@ -14,6 +14,32 @@ const Certificates = () => {
 
   const certificates = [
     {
+      title: 'Provisional Degree Certificate',
+      issuer: 'Gujarat Technological University (GTU)',
+      date: '2026',
+      category: 'professional',
+      description: 'Provisional degree certificate awarded by GTU for the Bachelor of Technology program.',
+      skills: ['Academic Credential', 'Degree Completion', 'University Certification'],
+      credentialId: 'GTU-2026-PDC',
+      image: 'https://images.pexels.com/photos/267507/pexels-photo-267507.jpeg?auto=compress&cs=tinysrgb&w=500',
+      color: 'from-slate-600 to-slate-800',
+      verified: true,
+      certificateUrl: 'https://drive.google.com/file/d/1zu6AfXdX2Uqs0Yre1Bi8a9C6Byvpyp9X/view'
+    },
+    {
+      title: 'GTU 100 Point Activity Certificate',
+      issuer: 'Gujarat Technological University (GTU)',
+      date: '2026',
+      category: 'professional',
+      description: 'GTU 100 point activity certificate completed during the 2026 academic year.',
+      skills: ['Student Activity', 'University Requirement', 'Professional Development'],
+      credentialId: 'GTU-2026-100-POINTS',
+      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=500',
+      color: 'from-emerald-500 to-teal-500',
+      verified: true,
+      certificateUrl: 'https://drive.google.com/file/d/1Cytas_l4VmjO7N7gQSdN2Tyu2HSqnh-3/view'
+    },
+    {
       title: 'AI for Manufacturing Training + Internship',
       issuer: 'Intel Corporation',
       date: '2025',

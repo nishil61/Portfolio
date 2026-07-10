@@ -1,8 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { ChevronDown, Download } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 import ResumeDownload from './ResumeDownload';
 
-const Hero = () => {
+type HeroProps = {
+  onNavigate: (path: '/home' | '/about' | '/projects' | '/education' | '/certificates' | '/contact') => void;
+};
+
+const Hero = ({ onNavigate }: HeroProps) => {
   const [currentRole, setCurrentRole] = useState(0);
   const roles = [
     'AI/ML Developer',
@@ -19,15 +23,8 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const scrollToNext = () => {
-    const aboutSection = document.getElementById('about');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-indigo-400/20 rounded-full blur-3xl animate-pulse"></div>
@@ -73,12 +70,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button
               className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center space-x-2"
-              onClick={() => {
-                const projectsSection = document.getElementById('projects');
-                if (projectsSection) {
-                  projectsSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
+              onClick={() => onNavigate('/projects')}
             >
               <span>View My Work</span>
               <ChevronDown className="group-hover:translate-y-1 transition-transform duration-300" size={20} />
@@ -91,7 +83,7 @@ const Hero = () => {
 
       {/* Scroll indicator */}
       <button
-        onClick={scrollToNext}
+        onClick={() => onNavigate('/about')}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
       >
         <ChevronDown className="text-gray-400 hover:text-blue-600 transition-colors duration-300" size={32} />
