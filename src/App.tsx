@@ -9,10 +9,10 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import LikeButton from './components/LikeButton';
 
-type AppRoute = '/home' | '/about' | '/projects' | '/education' | '/certificates' | '/contact';
+type AppRoute = '/' | '/about' | '/projects' | '/education' | '/certificates' | '/contact';
 
 const routeToTitle: Record<AppRoute, string> = {
-  '/home': 'Home',
+  '/': 'Home',
   '/about': 'About',
   '/projects': 'Projects',
   '/education': 'Education',
@@ -24,7 +24,7 @@ const normalizePath = (pathname: string): AppRoute => {
   const path = pathname.toLowerCase();
 
   if (path === '/' || path === '/index.html' || path === '/home') {
-    return '/home';
+    return '/';
   }
 
   if (path === '/about') return '/about';
@@ -33,7 +33,7 @@ const normalizePath = (pathname: string): AppRoute => {
   if (path === '/certificates') return '/certificates';
   if (path === '/contact' || path === '/contacts') return '/contact';
 
-  return '/home';
+  return '/';
 };
 
 function App() {
@@ -42,6 +42,10 @@ function App() {
   const currentTitle = useMemo(() => routeToTitle[currentPath], [currentPath]);
 
   useEffect(() => {
+    if (window.location.pathname.toLowerCase() === '/home') {
+      window.history.replaceState({}, '', '/');
+    }
+
     const handlePopState = () => {
       setCurrentPath(normalizePath(window.location.pathname));
     };
@@ -77,7 +81,6 @@ function App() {
         return <Certificates />;
       case '/contact':
         return <Contact />;
-      case '/home':
       default:
         return <Hero onNavigate={navigateTo} />;
     }

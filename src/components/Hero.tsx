@@ -3,7 +3,7 @@ import { ChevronDown } from 'lucide-react';
 import ResumeDownload from './ResumeDownload';
 
 type HeroProps = {
-  onNavigate: (path: '/home' | '/about' | '/projects' | '/education' | '/certificates' | '/contact') => void;
+  onNavigate: (path: '/' | '/about' | '/projects' | '/education' | '/certificates' | '/contact') => void;
 };
 
 const Hero = ({ onNavigate }: HeroProps) => {

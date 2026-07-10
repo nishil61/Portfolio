@@ -3,14 +3,14 @@ import { Menu, X, Home, User, Briefcase, GraduationCap, Award, Mail } from 'luci
 
 type HeaderProps = {
   activePath: string;
-  onNavigate: (path: '/home' | '/about' | '/projects' | '/education' | '/certificates' | '/contact') => void;
+  onNavigate: (path: '/' | '/about' | '/projects' | '/education' | '/certificates' | '/contact') => void;
 };
 
 const Header = ({ activePath, onNavigate }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { id: '/home', label: 'Home', icon: Home },
+    { id: '/', label: 'Home', icon: Home },
     { id: '/about', label: 'About', icon: User },
     { id: '/projects', label: 'Projects', icon: Briefcase },
     { id: '/education', label: 'Education', icon: GraduationCap },
@@ -22,7 +22,7 @@ const Header = ({ activePath, onNavigate }: HeaderProps) => {
     setIsOpen(false);
   }, [activePath]);
 
-  const navigate = (sectionId: '/home' | '/about' | '/projects' | '/education' | '/certificates' | '/contact') => {
+  const navigate = (sectionId: '/' | '/about' | '/projects' | '/education' | '/certificates' | '/contact') => {
     onNavigate(sectionId);
     setIsOpen(false);
   };
@@ -45,7 +45,7 @@ const Header = ({ activePath, onNavigate }: HeaderProps) => {
                 return (
                   <button
                     key={item.id}
-                    onClick={() => navigate(item.id as '/home' | '/about' | '/projects' | '/education' | '/certificates' | '/contact')}
+                    onClick={() => navigate(item.id as '/' | '/about' | '/projects' | '/education' | '/certificates' | '/contact')}
                     className={`px-3 py-2 rounded-md text-sm font-medium flex items-center space-x-1 transition-all duration-300 ${
                       activePath === item.id
                         ? 'text-blue-600 bg-blue-50'
@@ -80,7 +80,7 @@ const Header = ({ activePath, onNavigate }: HeaderProps) => {
                 return (
                   <button
                     key={item.id}
-                    onClick={() => navigate(item.id as '/home' | '/about' | '/projects' | '/education' | '/certificates' | '/contact')}
+                    onClick={() => navigate(item.id as '/' | '/about' | '/projects' | '/education' | '/certificates' | '/contact')}
                     className={`w-full text-left px-3 py-2 rounded-md text-base font-medium flex items-center space-x-2 transition-all duration-300 ${
                       activePath === item.id
                         ? 'text-blue-600 bg-blue-50'

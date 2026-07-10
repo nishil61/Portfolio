@@ -1,14 +1,14 @@
 import { Heart, Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
 
 type FooterProps = {
-  onNavigate: (path: '/home' | '/about' | '/projects' | '/education' | '/certificates' | '/contact') => void;
+  onNavigate: (path: '/' | '/about' | '/projects' | '/education' | '/certificates' | '/contact') => void;
 };
 
 const Footer = ({ onNavigate }: FooterProps) => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { label: 'Home', path: '/home' as const },
+    { label: 'Home', path: '/' as const },
     { label: 'About', path: '/about' as const },
     { label: 'Projects', path: '/projects' as const },
     { label: 'Education', path: '/education' as const },
@@ -109,7 +109,7 @@ const Footer = ({ onNavigate }: FooterProps) => {
                 © {currentYear} Nishil Pathak. All rights reserved.
               </p>
               <button
-                onClick={() => onNavigate('/home')}
+                onClick={() => onNavigate('/')}
                 className="group w-8 h-8 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
                 aria-label="Scroll to top"
               >
